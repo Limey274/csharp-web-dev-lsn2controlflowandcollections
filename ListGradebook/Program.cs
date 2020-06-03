@@ -30,7 +30,7 @@ namespace ListGradebook
             // Get student grades
             foreach (string student in students)
             {
-                Console.WriteLine("Grade for " + student + ": ");
+                Console.WriteLine("ID for " + student + ": ");
                 input = Console.ReadLine();
                 double grade = Double.Parse(input);
                 grades.Add(grade);
@@ -42,12 +42,12 @@ namespace ListGradebook
 
             for (int i = 0; i < students.Count; i++)
             {
-                Console.WriteLine(students[i] + " (" + grades[i] + ")");
+                Console.WriteLine(grades[i] + " (" + students[i] + ")");
                 sum += grades[i];
             }
 
-            double avg = sum / students.Count;
-            Console.WriteLine("Average grade: " + avg);
+            //double avg = sum / students.Count;
+            Console.WriteLine("Number of students: " + students.Count);
         }
     }
 }
